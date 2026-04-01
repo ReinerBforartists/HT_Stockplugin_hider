@@ -74,17 +74,17 @@ Nothing is permanently deleted. You can always restore plugins from within the a
 ## Usage
 
 
-1\. Launch the app
+1. Launch the app
 
-2\. Select your FL Studio edition from the dropdown
+2. Select your FL Studio edition from the dropdown
 
-3\. Click \*\*Select Demo Plugins\*\* to automatically select all plugins not included in your edition
+3. Click \*\*Select Demo Plugins\*\* to automatically select all plugins not included in your edition
 
-4\. And / Or mark single plugins in the list that you want to hide
+4. And / Or mark single plugins in the list that you want to hide
 
-5\. Click \*\*Move to Backup\*\* to hide them from FL Studio
+5. Click \*\*Move to Backup\*\* to hide them from FL Studio
 
-6\. Restart FL Studio
+6. Restart FL Studio
 
 
 To restore plugins, select them in the Backup list and click \*\*Restore Selected\*\*, or simply double-click an entry.
@@ -92,7 +92,7 @@ To restore plugins, select them in the Backup list and click \*\*Restore Selecte
 
 ## Screenshots
 
-!\[Explanation](./img/stockpluginhider.jpg)
+![Explanation](./img/stockpluginhider.jpg)
 
 
 ## License
