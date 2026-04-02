@@ -178,13 +178,20 @@ def delete_selected():
             rel = os.path.relpath(fst_path, BASE_PATH)
             target = os.path.join(BACKUP_PATH, rel)
             os.makedirs(os.path.dirname(target), exist_ok=True)
-            shutil.move(fst_path, target)
+            try:
+                shutil.move(fst_path, target)
+            except Exception as e:
+                messagebox.showwarning("Error", f"Could not move {name}:\n{e}\n\nMake sure the file is not in use and you have write permissions.")
+                continue
 
             nfo = fst_path.replace(".fst", ".nfo")
             if os.path.exists(nfo):
                 target_nfo = os.path.join(BACKUP_PATH, os.path.relpath(nfo, BASE_PATH))
                 os.makedirs(os.path.dirname(target_nfo), exist_ok=True)
-                shutil.move(nfo, target_nfo)
+                try:
+                    shutil.move(nfo, target_nfo)
+                except Exception:
+                    pass
 
     update_data()
 
