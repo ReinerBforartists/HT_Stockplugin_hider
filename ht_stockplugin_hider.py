@@ -31,7 +31,7 @@ CORE = [
 # ---------------- Plugins fully included per edition ----------------
 _FRUITY = {
     # Instruments
-    "3x OSC", "3x Osc", "Autogun", "BassDrum", "BeepMap", "BooBass",
+    "Sampler", "Audio Clip", "Automation Clip", "3x OSC", "3x Osc", "Autogun", "BassDrum", "BeepMap", "BooBass",
     "Channel Sampler", "Dashboard", "DirectWave Player", "Drumpad", "FLEX",
     "FL Studio Mobile", "FL Studio Mobile Rack",
     "Fruit Kick", "Fruity Dance", "Fruity DrumSynth Live", "Fruity DX10", "Fruity Granulizer",
@@ -229,9 +229,11 @@ def clear_backup():
     update_data()
 
 # ---------------- Select Helpers ----------------
-def select_all_including_core(lb):
+def select_all(lb):
     for i in range(lb.size()):
-        lb.select_set(i)
+        name = lb.get(i)
+        if name not in CORE:
+            lb.select_set(i)
     update_status()
 
 def deselect_all(lb):
@@ -336,7 +338,7 @@ def create_list(parent, title):
     btns = ttk.Frame(f)
     btns.pack(fill=tk.X, pady=2)
 
-    ttk.Button(btns, text="Select All", command=lambda: select_all_including_core(lb)).pack(side=tk.LEFT, expand=True, fill=tk.X)
+    ttk.Button(btns, text="Select All", command=lambda: select_all(lb)).pack(side=tk.LEFT, expand=True, fill=tk.X)
     ttk.Button(btns, text="Deselect All", command=lambda: deselect_all(lb)).pack(side=tk.LEFT, expand=True, fill=tk.X)
 
     return lb
@@ -345,7 +347,7 @@ listbox_generators = create_list(lists, "Generators")
 listbox_effects = create_list(lists, "Effects")
 listbox_backup = create_list(lists, "Backup")
 
-# Double clickj at a backup to restore it.
+# Double click at a backup to restore it.
 listbox_backup.bind("<Double-Button-1>", lambda e: restore_selected())
 
 # Bottom Buttons
