@@ -1,6 +1,6 @@
 # HT Stockplugin Hider
 
-A lightweight utility for FL Studio that lets you hide stock plugins from the plugin browser — especially useful for removing demo plugins that can't be disabled through FL Studio's built-in settings.
+A lightweight utility for FL Studio that lets you hide stock plugins from the plugin browser. This is especially useful for removing demo plugins that can't be disabled through FL Studio's built-in settings.
 
 ## The Problem
 
@@ -10,7 +10,7 @@ FL Studio displays all stock plugins in the UI, and does not allow hiding them t
 
 HT Stockplugin Hider moves the .fst and .nfo files of unwanted plugins out of the FL Studio Plugin Database folder into a backup location. FL Studio won't load what it can't find. Plugins can be restored at any time with a single click.
 
-As a side effect, once a plugin has been moved and restored, FL Studio recognizes it as a newly added plugin — meaning it can finally be toggled on and off through the Plugin Manager like any other plugin.
+As a side effect, once the fst and nfo files of a stock plugin has been moved to backup, FL Studio recognizes it as a newly added plugin. Which means it can finally be toggled on and off through the Plugin Manager like any other plugin.
 
 Note: No files are permanently deleted. And the plugins arent't touched at all. Plugins are only hidden by moving their database entries out of FL Studio's plugin folder. They can be restored at any time.
 
