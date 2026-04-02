@@ -88,6 +88,9 @@ INCLUDED_IN_EDITION = {
     "All Plugins Edition": _ALL_PLUGINS,
 }
 
+# All known FL Studio stock plugins across all editions
+ALL_STOCK = _FRUITY | _PRODUCER | _SIGNATURE | _ALL_PLUGINS
+
 def get_not_included(edition_name, groups):
     included = INCLUDED_IN_EDITION.get(edition_name, set())
     return {name for name in groups if name not in included}
@@ -105,6 +108,8 @@ def load_plugins(base_path):
         for file in files:
             if file.lower().endswith(".fst"):
                 name = file[:-4]
+                if name not in ALL_STOCK:
+                    continue
                 path = os.path.join(root, file)
 
                 if "Generators" in path:
