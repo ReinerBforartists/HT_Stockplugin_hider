@@ -4,7 +4,7 @@ A lightweight utility for FL Studio that lets you hide stock plugins from the pl
 
 ## The Problem
 
-FL Studio displays all stock plugins in the UI, and does not allow hiding them through the Plugin Manager. Unlike third-party VSTs, stock plugins ignore the visibility toggle — they always show up, including demo-only plugins that are not part of your edition.
+FL Studio displays all stock plugins in the UI, and does not allow hiding them through the Plugin Manager. Unlike third-party VSTs, stock plugins ignore the visibility toggle. They always show up, including demo-only plugins that are not part of your edition.
 
 ## The Solution
 
