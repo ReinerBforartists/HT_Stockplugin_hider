@@ -277,7 +277,7 @@ if not os.path.isdir(BASE_PATH):
         f"Could not find the FL Studio Plugin Database at:\n{BASE_PATH}\n\n"
         "Please make sure FL Studio is installed and has been launched at least once.")
     root.destroy()
-    exit()
+    sys.exit()
 
 frame = ttk.Frame(root, padding=10)
 frame.pack(fill=tk.BOTH, expand=True)
