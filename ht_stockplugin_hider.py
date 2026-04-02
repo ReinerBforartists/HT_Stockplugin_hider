@@ -365,6 +365,8 @@ ttk.Button(bottom, text="Move to Backup", command=delete_selected).pack(side=tk.
 ttk.Button(bottom, text="Restore Selected", command=restore_selected).pack(side=tk.LEFT, padx=5)
 ttk.Button(bottom, text="Clear Backup Folder", command=clear_backup).pack(side=tk.LEFT, padx=5)
 ttk.Button(bottom, text="About", command=show_about).pack(side=tk.LEFT, padx=5)
+hint_label = ttk.Label(root, text="Restart FL Studio to apply changes.")
+hint_label.pack(pady=(0, 10))
 
 # ---------------- Init ----------------
 plugin_groups = {}
