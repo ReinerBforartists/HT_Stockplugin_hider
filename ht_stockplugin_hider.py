@@ -263,7 +263,7 @@ def select_demo_plugins():
 # ---------------- About ----------------
 def show_about():
     messagebox.showinfo("About FL Studio Plugin Cleaner",
-        "HT Stockplugin hider v0.9\n"
+        "HT Stockplugin hider v0.9.1\n"
         "Copyright ©2026 by Haizy Tiles\n"
         "MIT license\n\n"
         "Moves demo/unavailable plugin .fst and .nfo files out of the\n"
