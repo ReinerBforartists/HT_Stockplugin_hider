@@ -272,11 +272,13 @@ def show_about():
         f"{BACKUP_PATH}\n\n"
         "Plugins can be restored at any time from the Backup list.")
 
-# ---------------- GUI ----------------
-root = tk.Tk()
+# ---------------- Resource path ----------------
 def resource_path(relative):
     base = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
     return os.path.join(base, relative)
+
+# ---------------- GUI ----------------
+root = tk.Tk()
 
 try:
     root.iconbitmap(resource_path("icon.ico"))
