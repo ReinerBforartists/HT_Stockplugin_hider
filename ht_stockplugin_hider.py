@@ -233,11 +233,14 @@ def restore_selected():
 def clear_backup():
     if not messagebox.askyesno(
         "Clear Backup Folder",
-        "This will permanently delete all backed-up plugin database files "
-        "(.fst and .nfo).\n\n"
+        "This will permanently delete all backed-up plugin database files (.fst and .nfo).\n\n"
         "The installed plugins themselves will NOT be affected.\n\n"
-        "If you want to restore the plugin entries later, simply run a "
-        "plugin scan in FL Studio.\n\n"
+        "To restore the plugin entries after this backup is deleted, you have two options:\n\n"
+        "1. Enable the plugins manually again in the FL Studio Plugin Manager.\n\n"
+        "2. Rename the Image-Line folder in your Documents folder. "
+        "FL Studio will regenerate its plugin database, including the activated demo versions.\n\n"
+        "You will need to copy your user content back manually, though.\n\n"
+        "So best is to keep the backup folder content until you really don't need it anymore.\n\n"
         "Do you want to continue?",
         parent=root,
         default=messagebox.NO
