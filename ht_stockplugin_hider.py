@@ -231,6 +231,19 @@ def restore_selected():
 
 # ---------------- Clear Backup ----------------
 def clear_backup():
+    if not messagebox.askyesno(
+        "Clear Backup Folder",
+        "This will permanently delete all backed-up plugin database files "
+        "(.fst and .nfo).\n\n"
+        "The installed plugins themselves will NOT be affected.\n\n"
+        "If you want to restore the plugin entries later, simply run a "
+        "plugin scan in FL Studio.\n\n"
+        "Do you want to continue?",
+        parent=root,
+        default=messagebox.NO
+    ):
+        return
+
     shutil.rmtree(BACKUP_PATH, ignore_errors=True)
     os.makedirs(BACKUP_PATH, exist_ok=True)
     update_data()
@@ -263,7 +276,7 @@ def select_demo_plugins():
 # ---------------- About ----------------
 def show_about():
     messagebox.showinfo("About FL Studio Plugin Cleaner",
-        "HT Stockplugin hider v1.0.0\n"
+        "HT Stockplugin hider v1.0.1\n"
         "Copyright ©2026 by Haizy Tiles\n"
         "MIT license\n\n"
         "Moves demo/unavailable plugin .fst and .nfo files out of the\n"
